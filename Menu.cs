@@ -34,6 +34,7 @@ public class Menu
             if (!int.TryParse(Console.ReadLine(), out opcao))
             {
                 Console.WriteLine("Opção inválida!");
+                 Console.WriteLine("pressione qualquer tecla para continuar...");
                 Console.ReadKey();
                 continue;
             }
