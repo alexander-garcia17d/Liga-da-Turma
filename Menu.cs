@@ -74,6 +74,7 @@ public class Menu
 
                 default:
                     Console.WriteLine("Opção inválida!");
+                     Console.WriteLine("pressione qualquer tecla para continuar...");
                     Console.ReadKey();
                     break;
             }

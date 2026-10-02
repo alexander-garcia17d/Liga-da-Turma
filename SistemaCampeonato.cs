@@ -344,6 +344,7 @@ public class SistemaCampeonato
         Console.WriteLine("Venha participar do festival!");
         Console.WriteLine("========================================");
         Console.WriteLine("pressione qualquer tecla para continuar...");
+         Console.WriteLine("pressione qualquer tecla para continuar...");
         Console.ReadKey();
     }
 
