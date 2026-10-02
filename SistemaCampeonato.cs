@@ -35,6 +35,7 @@ public class SistemaCampeonato
             if (equipe.Nome.Equals(nome, StringComparison.OrdinalIgnoreCase))
             {
                 Console.WriteLine("Essa equipe já está cadastrada.");
+                 Console.WriteLine("pressione qualquer tecla para continuar...");
                 Console.ReadKey();
                 return;
             }
@@ -43,6 +44,7 @@ public class SistemaCampeonato
         equipes.Add(new Equipe(nome));
 
         Console.WriteLine("Equipe cadastrada com sucesso!");
+        Console.WriteLine("pressione qualquer tecla para continuar...");
         Console.ReadKey();
     }
 
@@ -63,7 +65,7 @@ public class SistemaCampeonato
                 Console.WriteLine((i + 1) + " - " + equipes[i].Nome);
             }
         }
-
+        Console.WriteLine("pressione qualquer tecla para continuar...");
         Console.ReadKey();
     }
 
@@ -76,6 +78,7 @@ public class SistemaCampeonato
         if (equipes.Count < 2)
         {
             Console.WriteLine("É necessário cadastrar pelo menos duas equipes.");
+             Console.WriteLine("pressione qualquer tecla para continuar...");
             Console.ReadKey();
             return;
         }
@@ -96,6 +99,7 @@ public class SistemaCampeonato
             equipe1 > equipes.Count)
         {
             Console.WriteLine("Equipe inválida.");
+            Console.WriteLine("pressione qualquer tecla para continuar...");
             Console.ReadKey();
             return;
         }
@@ -109,6 +113,7 @@ public class SistemaCampeonato
             equipe2 > equipes.Count)
         {
             Console.WriteLine("Equipe inválida.");
+            Console.WriteLine("pressione qualquer tecla para continuar...");
             Console.ReadKey();
             return;
         }
@@ -116,6 +121,7 @@ public class SistemaCampeonato
         if (equipe1 == equipe2)
         {
             Console.WriteLine("Uma equipe não pode jogar contra ela mesma.");
+            Console.WriteLine("pressione qualquer tecla para continuar...");
             Console.ReadKey();
             return;
         }
@@ -131,6 +137,7 @@ public class SistemaCampeonato
             (modalidade != 1 && modalidade != 2))
         {
             Console.WriteLine("Modalidade inválida.");
+            Console.WriteLine("pressione qualquer tecla para continuar...");
             Console.ReadKey();
             return;
         }
@@ -160,6 +167,7 @@ public class SistemaCampeonato
         if (!int.TryParse(Console.ReadLine(), out gols1) || gols1 < 0)
         {
             Console.WriteLine("Quantidade de gols inválida.");
+            Console.WriteLine("pressione qualquer tecla para continuar...");
             Console.ReadKey();
             return;
         }
@@ -171,8 +179,10 @@ public class SistemaCampeonato
         if (!int.TryParse(Console.ReadLine(), out gols2) || gols2 < 0)
         {
             Console.WriteLine("Quantidade de gols inválida.");
+            Console.WriteLine("pressione qualquer tecla para continuar...");
             Console.ReadKey();
             return;
+           
         }
 
         PartidaFutsal partida =
@@ -183,7 +193,7 @@ public class SistemaCampeonato
         Console.WriteLine();
         Console.WriteLine("Partida registrada com sucesso!");
         Console.WriteLine(partida.ObterResultado());
-
+        Console.WriteLine("pressione qualquer tecla para continuar...");
         Console.ReadKey();
     }
 
@@ -202,6 +212,7 @@ public class SistemaCampeonato
         if (!int.TryParse(Console.ReadLine(), out vitorias1))
         {
             Console.WriteLine("Valor inválido.");
+            Console.WriteLine("pressione qualquer tecla para continuar...");
             Console.ReadKey();
             return;
         }
@@ -213,6 +224,7 @@ public class SistemaCampeonato
         if (!int.TryParse(Console.ReadLine(), out vitorias2))
         {
             Console.WriteLine("Valor inválido.");
+            Console.WriteLine("pressione qualquer tecla para continuar...");
             Console.ReadKey();
             return;
         }
@@ -224,6 +236,7 @@ public class SistemaCampeonato
         if (!placarValido)
         {
             Console.WriteLine("Placar inválido para uma série melhor de três.");
+            Console.WriteLine("pressione qualquer tecla para continuar...");
             Console.ReadKey();
             return;
         }
@@ -240,7 +253,7 @@ public class SistemaCampeonato
         Console.WriteLine();
         Console.WriteLine("Partida registrada com sucesso!");
         Console.WriteLine(partida.ObterResultado());
-
+        Console.WriteLine("pressione qualquer tecla para continuar...");
         Console.ReadKey();
     }
 
@@ -261,7 +274,7 @@ public class SistemaCampeonato
                 Console.WriteLine(partida);
             }
         }
-
+        Console.WriteLine("pressione qualquer tecla para continuar...");
         Console.ReadKey();
     }
 
@@ -289,6 +302,7 @@ public class SistemaCampeonato
             string.IsNullOrWhiteSpace(horario))
         {
             Console.WriteLine("Todos os campos devem ser preenchidos.");
+            Console.WriteLine("pressione qualquer tecla para continuar...");
             Console.ReadKey();
             return;
         }
@@ -300,7 +314,7 @@ public class SistemaCampeonato
             horario);
 
         Console.WriteLine("Festival cadastrado com sucesso!");
-
+         Console.WriteLine("pressione qualquer tecla para continuar...");
         Console.ReadKey();
     }
 
@@ -313,6 +327,7 @@ public class SistemaCampeonato
         if (festival == null)
         {
             Console.WriteLine("Nenhum festival cadastrado.");
+             Console.WriteLine("pressione qualquer tecla para continuar...");
             Console.ReadKey();
             return;
         }
@@ -328,7 +343,7 @@ public class SistemaCampeonato
         Console.WriteLine();
         Console.WriteLine("Venha participar do festival!");
         Console.WriteLine("========================================");
-
+        Console.WriteLine("pressione qualquer tecla para continuar...");
         Console.ReadKey();
     }
 
@@ -341,6 +356,7 @@ public class SistemaCampeonato
         if (partidas.Count == 0)
         {
             Console.WriteLine("Nenhuma partida registrada.");
+            Console.WriteLine("pressione qualquer tecla para continuar...");
             Console.ReadKey();
             return;
         }
@@ -362,6 +378,7 @@ public class SistemaCampeonato
         if (!int.TryParse(Console.ReadLine(), out id))
         {
             Console.WriteLine("Número inválido.");
+            Console.WriteLine("pressione qualquer tecla para continuar...");
             Console.ReadKey();
             return;
         }
@@ -380,6 +397,7 @@ public class SistemaCampeonato
         if (partidaEscolhida == null)
         {
             Console.WriteLine("Partida não encontrada.");
+            Console.WriteLine("pressione qualquer tecla para continuar...");
             Console.ReadKey();
             return;
         }
@@ -402,7 +420,7 @@ public class SistemaCampeonato
             "Resultado: " +
             partidaEscolhida.ObterResultado());
         Console.WriteLine("========================================");
-
+        Console.WriteLine("pressione qualquer tecla para continuar...");
         Console.ReadKey();
     }
 }
