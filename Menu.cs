@@ -1,4 +1,6 @@
-﻿using System;
+﻿
+
+using System;
 
 public class Menu
 {
@@ -31,13 +33,33 @@ public class Menu
             Console.WriteLine("================================");
             Console.Write("Escolha uma opção: ");
 
-            if (!int.TryParse(Console.ReadLine(), out opcao))
+            string entrada = Console.ReadLine();
+
+            // Verifica se o usuário apenas apertou ENTER
+            if (string.IsNullOrWhiteSpace(entrada))
             {
+                Console.WriteLine();
                 Console.WriteLine("Opção inválida!");
-                 Console.WriteLine("pressione qualquer tecla para continuar...");
-                Console.ReadKey();
+                Console.WriteLine("Pressione ENTER para continuar...");
+                Console.ReadLine();
                 continue;
             }
+
+            // Tenta transformar a entrada em número
+            int numero;
+
+            if (!int.TryParse(entrada, out numero))
+            {
+                Console.WriteLine();
+                Console.WriteLine("Digite apenas números.");
+                Console.WriteLine("Pressione ENTER para continuar...");
+                Console.ReadLine();
+                continue;
+            }
+
+            // Só altera opcao depois que temos certeza
+            // de que a entrada é um número
+            opcao = numero;
 
             switch (opcao)
             {
@@ -74,9 +96,10 @@ public class Menu
                     break;
 
                 default:
+                    Console.WriteLine();
                     Console.WriteLine("Opção inválida!");
-                     Console.WriteLine("pressione qualquer tecla para continuar...");
-                    Console.ReadKey();
+                    Console.WriteLine("Pressione ENTER para continuar...");
+                    Console.ReadLine();
                     break;
             }
         }
